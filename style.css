@@ -18,10 +18,12 @@ body{
     align-items:center;
 
     padding:25px;
-    overflow-x:hidden;
+    overflow:hidden;
+
+    background:#f6eadf;
 }
 
-.fundo{
+.fundo-img{
     position:fixed;
     top:0;
     left:0;
@@ -29,10 +31,8 @@ body{
     width:100vw;
     height:100vh;
 
-    background-image:url("img/fundo.png");
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
+    object-fit:cover;
+    object-position:center center;
 
     z-index:-1;
 }
@@ -107,11 +107,9 @@ p{
         padding:0;
     }
 
-    .fundo{
-        background-image:url("img/fundo.png");
-        background-size:cover;
-        background-position:center center;
-        background-repeat:no-repeat;
+    .fundo-img{
+        object-fit:cover;
+        object-position:center center;
     }
 
     .container{
