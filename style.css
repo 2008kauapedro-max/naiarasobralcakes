@@ -32,7 +32,9 @@ body{
     height:100vh;
 
     object-fit:cover;
-    object-position:center center;
+
+    /* ÁRVORE MAIS VISÍVEL NO FUNDO */
+    object-position:95% center;
 
     z-index:-1;
 }
@@ -105,11 +107,17 @@ p{
 
     body{
         padding:0;
+        overflow:hidden;
     }
 
     .fundo-img{
+        width:100vw;
+        height:100vh;
+
         object-fit:cover;
-        object-position:center center;
+
+        /* NO CELULAR: TRAZ A ÁRVORE PRO CAMPO DE VISÃO */
+        object-position:100% center;
     }
 
     .container{
