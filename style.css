@@ -15,22 +15,24 @@ body{
 
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
 
-    padding:25px;
+    padding:35px 20px;
 
     background:#f6eadf;
+    overflow-x:hidden;
 }
 
 .fundo-img{
     position:fixed;
     top:0;
     left:0;
+
     width:100vw;
     height:100vh;
 
     object-fit:cover;
-    object-position:center center;
+    object-position:100% center;
 
     z-index:-1;
 }
@@ -39,7 +41,7 @@ body{
     width:90%;
     max-width:470px;
 
-    background:rgba(255,255,255,0.78);
+    background:rgba(255,255,255,0.80);
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
 
@@ -92,6 +94,55 @@ p{
     color:white;
 }
 
+.reviews{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(110,71,47,0.18);
+}
+
+.reviews h2{
+    color:#6e472f;
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.review-box{
+    background:rgba(255,255,255,0.82);
+    border-radius:18px;
+    padding:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.07);
+    min-height:145px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.stars{
+    color:#f5a8ba;
+    font-size:20px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+#review-text{
+    font-size:14px;
+    line-height:1.45;
+    color:#6e472f;
+    margin-bottom:10px;
+}
+
+#review-author{
+    font-size:13px;
+    font-weight:600;
+    color:#8a5c44;
+}
+
+.avaliar{
+    background:#f5a8ba;
+    color:white;
+}
+
 .footer{
     margin-top:18px;
     font-size:13px;
@@ -100,16 +151,10 @@ p{
 
 /* CELULAR */
 @media(max-width:600px){
-html, 
-    body{ 
-        overflow:hidden;
-        height:100vh;
-    }
 
-
-    body{   
-        padding:20px 0;
-        align-items:center;
+    body{
+        padding:25px 0;
+        align-items:flex-start;
     }
 
     .fundo-img{
@@ -124,12 +169,29 @@ html,
         width:90%;
         max-width:390px;
 
-       transform:translateY(-30px) scale(0.70);
-        transform-origin:center center;
+        transform:scale(0.82);
+        transform-origin:top center;
 
         padding:28px;
         border-radius:30px;
 
-        background:rgba(255,255,255,0.80);
+        background:rgba(255,255,255,0.82);
+    }
+
+    .logo{
+        width:100px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .btn{
+        padding:13px;
+        font-size:14px;
+    }
+
+    .reviews h2{
+        font-size:16px;
     }
 }
