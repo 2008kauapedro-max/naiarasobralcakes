@@ -62,6 +62,7 @@ p{
     display:flex;
     align-items:center;
     justify-content:center;
+    gap:10px;
 
     width:100%;
     padding:14px;
@@ -92,8 +93,10 @@ p{
 @media(max-width:600px){
 
     body{
+        background-image:url("img/fundo.png");
         background-size:auto 100%;
         background-position:140% center;
+        background-repeat:no-repeat;
         background-attachment:scroll;
 
         padding:0;
