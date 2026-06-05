@@ -100,8 +100,14 @@ p{
 
 /* CELULAR */
 @media(max-width:600px){
+html, 
+    body{ 
+        overflow:hidden;
+        height:100vh;
+    }
 
-    body{
+
+    body{   
         padding:20px 0;
         align-items:center;
     }
