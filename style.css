@@ -118,7 +118,7 @@ p{
         width:90%;
         max-width:390px;
 
-        transform:scale(0.70);
+       transform:translateY(-40px) scale(0.70);
         transform-origin:center center;
 
         padding:28px;
