@@ -13,17 +13,28 @@ body{
     font-family:'Poppins', Arial, sans-serif;
     min-height:100vh;
 
-    background-image:url("img/fundo.png");
-    background-size:cover;
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-
     display:flex;
     justify-content:center;
     align-items:center;
 
     padding:25px;
+    overflow-x:hidden;
+}
+
+.fundo{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100vw;
+    height:100vh;
+
+    background-image:url("img/fundo.png");
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+
+    z-index:-1;
 }
 
 .container{
@@ -93,22 +104,14 @@ p{
 @media(max-width:600px){
 
     body{
-        background-image:url("img/fundo.png");
-
-        /* menos zoom no fundo */
-        background-size:auto 100%;
-
-        /* aumenta esse número para puxar a árvore mais pra esquerda */
-        background-position:190% center;
-
-        background-repeat:no-repeat;
-        background-attachment:scroll;
-
         padding:0;
+    }
 
-        display:flex;
-        justify-content:center;
-        align-items:center;
+    .fundo{
+        background-image:url("img/fundo.png");
+        background-size:cover;
+        background-position:center center;
+        background-repeat:no-repeat;
     }
 
     .container{
