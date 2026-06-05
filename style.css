@@ -9,8 +9,13 @@ body{
     min-height:100vh;
 
     background-image:url("img/fundo.png");
+
+    /* MAIS FUNDO APARECENDO */
     background-size:cover;
-    background-position:center;
+
+    /* ÁRVORE MAIS PRA ESQUERDA */
+    background-position:50% center;
+
     background-repeat:no-repeat;
     background-attachment:fixed;
 
@@ -18,26 +23,31 @@ body{
     justify-content:center;
     align-items:center;
 
-    padding:25px;
+    padding:20px;
 }
 
 .container{
-    width:80%;
-    max-width:470px;
+
+    /* TAMANHO NORMAL NO PC */
+    width:90%;
+    max-width:420px;
 
     background:rgba(255,255,255,0.78);
+
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
 
     border-radius:28px;
+
     padding:28px;
 
     text-align:center;
+
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 .logo{
-    width:115px;
+    width:120px;
     margin-bottom:14px;
 }
 
@@ -59,17 +69,23 @@ p{
     gap:10px;
 
     width:100%;
+
     padding:14px;
+
     margin-top:12px;
 
     background:white;
+
     color:#6e472f;
 
     text-decoration:none;
+
     border-radius:15px;
+
     font-weight:bold;
 
     transition:0.2s;
+
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
@@ -89,61 +105,51 @@ p{
 }
 
 /* CELULAR */
+
 @media(max-width:600px){
 
     body{
-        min-height:100vh;
 
-        background-size:auto 100%;
-        background-position:78% center;
+        /* MOSTRA MAIS FUNDO */
+        background-size:cover;
+
+        /* PUXA A ÁRVORE PRA ESQUERDA */
+        background-position:45% center;
+
         background-attachment:scroll;
 
-        display:flex;
-        justify-content:center;
-        align-items:flex-start;
-
-        padding-top:95px;
-        padding-left:20px;
-        padding-right:20px;
-        padding-bottom:60px;
+        padding:10px;
     }
 
     .container{
-        width:68%;
-        max-width:310px;
 
-        padding:18px;
-        border-radius:24px;
+        /* ISSO AQUI É O EFEITO DE TIRAR O ZOOM */
+        transform:scale(0.82);
 
-        background:rgba(255,255,255,0.74);
+        width:90%;
+        max-width:420px;
+
+        padding:28px;
     }
 
     .logo{
-        width:78px;
-        margin-bottom:10px;
+        width:120px;
     }
 
     h1{
-        font-size:18px;
-        line-height:1.15;
-        margin-bottom:8px;
+        font-size:26px;
     }
 
     p{
-        font-size:12px;
-        line-height:1.35;
-        margin-bottom:6px;
+        font-size:14px;
     }
 
     .btn{
-        padding:9px;
-        margin-top:10px;
-        font-size:12px;
-        border-radius:13px;
+        padding:14px;
+        font-size:14px;
     }
 
     .footer{
-        margin-top:14px;
-        font-size:10px;
+        font-size:13px;
     }
 }
