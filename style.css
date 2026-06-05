@@ -26,6 +26,7 @@ body{
     max-width:500px;
 
     background:rgba(255,255,255,0.82);
+
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
 
@@ -33,6 +34,7 @@ body{
     padding:30px;
 
     text-align:center;
+
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
@@ -66,10 +68,13 @@ p{
     color:#6e472f;
 
     text-decoration:none;
+
     border-radius:15px;
+
     font-weight:bold;
 
     transition:0.2s;
+
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
@@ -88,36 +93,44 @@ p{
     color:#7d6456;
 }
 
+/* CELULAR */
+
 @media(max-width:600px){
+
     body{
-        padding:18px;
-        background-position:center;
+        justify-content:center;
+        align-items:flex-start;
+
+        padding-top:120px;
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:40px;
     }
 
     .container{
-        width: 60%;
-        padding:22px;
+        width:65%;
+        padding:20px;
         border-radius:24px;
     }
 
     .logo{
-        width:105px;
+        width:90px;
     }
 
     h1{
-        font-size:22px;
+        font-size:20px;
     }
 
     p{
-        font-size:14px;
+        font-size:13px;
     }
 
     .btn{
-        padding:13px;
-        font-size:14px;
+        padding:10px;
+        font-size:13px;
     }
 
     .footer{
-        font-size:12px;
+        font-size:11px;
     }
 }
