@@ -94,8 +94,13 @@ p{
 
     body{
         background-image:url("img/fundo.png");
+
+        /* menos zoom no fundo */
         background-size:auto 100%;
-        background-position:140% center;
+
+        /* aumenta esse número para puxar a árvore mais pra esquerda */
+        background-position:190% center;
+
         background-repeat:no-repeat;
         background-attachment:scroll;
 
