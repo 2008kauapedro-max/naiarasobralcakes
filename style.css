@@ -99,7 +99,7 @@ p{
 
     body{
         background-size:auto 100%;
-        background-position:right center;
+        background-position:140% center;
         background-attachment:scroll;
 
         padding:12px;
@@ -109,42 +109,37 @@ p{
     }
 
     .container{
-        width:calc(100vw - 24px);
-        max-width:none;
 
-        padding:26px 22px;
-        border-radius:30px;
+        /* AQUI ESTÁ O QUE VOCÊ QUER */
+        width:65%;
+
+        max-width:320px;
 
         background:rgba(255,255,255,0.80);
+
+        border-radius:30px;
+
+        padding:26px;
     }
 
     .logo{
-        width:100px;
-        margin-bottom:12px;
+        width:110px;
     }
 
     h1{
-        font-size:27px;
-        line-height:1.15;
-        margin-bottom:10px;
+        font-size:28px;
     }
 
     p{
-        font-size:15px;
-        line-height:1.35;
-        margin-bottom:7px;
+        font-size:14px;
     }
 
     .btn{
-        width:100%;
         padding:14px;
-        margin-top:12px;
-        font-size:15px;
-        border-radius:17px;
+        font-size:14px;
     }
 
     .footer{
-        margin-top:16px;
-        font-size:13px;
+        font-size:12px;
     }
 }
