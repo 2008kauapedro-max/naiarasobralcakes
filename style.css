@@ -26,12 +26,11 @@ body{
     position:fixed;
     top:0;
     left:0;
-
     width:100vw;
     height:100vh;
 
     object-fit:cover;
-    object-position:95% center;
+    object-position:center center;
 
     z-index:-1;
 }
@@ -103,8 +102,8 @@ p{
 @media(max-width:600px){
 
     body{
-        padding:30px 0;
-        align-items:flex-start;
+        padding:20px 0;
+        align-items:center;
     }
 
     .fundo-img{
@@ -120,7 +119,7 @@ p{
         max-width:390px;
 
         transform:scale(0.70);
-        transform-origin:top center;
+        transform-origin:center center;
 
         padding:28px;
         border-radius:30px;
