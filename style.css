@@ -62,7 +62,6 @@ p{
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
 
     width:100%;
     padding:14px;
@@ -75,12 +74,7 @@ p{
     border-radius:16px;
     font-weight:bold;
 
-    transition:0.2s;
     box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-.btn:hover{
-    transform:translateY(-2px);
 }
 
 .principal{
@@ -102,44 +96,23 @@ p{
         background-position:140% center;
         background-attachment:scroll;
 
-        padding:12px;
+        padding:0;
 
+        display:flex;
         justify-content:center;
         align-items:center;
     }
 
     .container{
+        width:90%;
+        max-width:390px;
 
-        /* AQUI ESTÁ O QUE VOCÊ QUER */
-        width:65%;
+        transform:scale(0.72);
+        transform-origin:center center;
 
-        max-width:320px;
-
-        background:rgba(255,255,255,0.80);
-
+        padding:28px;
         border-radius:30px;
 
-        padding:26px;
-    }
-
-    .logo{
-        width:110px;
-    }
-
-    h1{
-        font-size:28px;
-    }
-
-    p{
-        font-size:14px;
-    }
-
-    .btn{
-        padding:14px;
-        font-size:14px;
-    }
-
-    .footer{
-        font-size:12px;
+        background:rgba(255,255,255,0.80);
     }
 }
