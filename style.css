@@ -320,4 +320,24 @@ p{
 
 .produto img:hover{
     transform:scale(1.03);
+}.pedido-produto{
+    display:block;
+
+    margin-top:8px;
+    padding:8px;
+
+    background:#f5a8ba;
+    color:white;
+
+    text-decoration:none;
+    font-size:12px;
+    font-weight:600;
+
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+.pedido-produto:hover{
+    transform:scale(1.03);
 }
