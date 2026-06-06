@@ -256,4 +256,32 @@ p{
     .produto img{
         height:140px;
     }
+}.destaque{
+    margin-top:25px;
+    padding:0;
+    border-radius:22px;
+    background:rgba(245,168,186,0.15);
+    overflow:hidden;
+}
+
+.destaque-img{
+    width:100%;
+    height:170px;
+    object-fit:cover;
+    display:block;
+}
+
+.destaque-conteudo{
+    padding:18px;
+}
+
+.destaque h2{
+    color:#6e472f;
+    margin-bottom:10px;
+}
+
+.destaque-produto{
+    font-size:20px;
+    font-weight:700;
+    color:#6e472f;
 }
