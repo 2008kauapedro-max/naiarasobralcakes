@@ -350,4 +350,23 @@ p{
 
 .pedido-produto:hover{
     transform:scale(1.03);
+}.btn-destaque{
+    display:inline-block;
+
+    margin-top:15px;
+    padding:12px 24px;
+
+    background:#f5a8ba;
+    color:white;
+
+    text-decoration:none;
+    font-weight:600;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.btn-destaque:hover{
+    transform:scale(1.05);
 }
