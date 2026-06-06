@@ -53,3 +53,15 @@ reviewText.style.transition = "0.3s";
 reviewAuthor.style.transition = "0.3s";
 
 setInterval(changeReview, 5000);
+
+function abrirImagem(src){
+
+    document.getElementById("modalImagem").style.display = "flex";
+
+    document.getElementById("imagemAmpliada").src = src;
+}
+
+function fecharImagem(){
+
+    document.getElementById("modalImagem").style.display = "none";
+}

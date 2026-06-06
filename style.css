@@ -284,4 +284,40 @@ p{
     font-size:20px;
     font-weight:700;
     color:#6e472f;
+}.modal-imagem{
+    display:none;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.85);
+
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+}
+
+.modal-imagem img{
+    max-width:95%;
+    max-height:90%;
+
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(255,255,255,0.2);
+}
+
+.produto img{
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.produto img:hover{
+    transform:scale(1.03);
 }

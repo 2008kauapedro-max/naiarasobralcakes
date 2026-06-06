@@ -63,17 +63,17 @@
     <div class="produtos-grid">
 
       <div class="produto">
-            <img src="img/coxinhamorango.png" alt="Produto">
+            <img src="img/coxinhamorango.png" alt="Produto" onclick="abrirImagem(this.src)">
             <p>Coxinha de Morango</p>
         </div>
 
         <div class="produto">
-            <img src="img/bolo-decorado.png" alt="Produto">
+           <img src="img/bolo-decorado.png" alt="Produto" onclick="abrirImagem(this.src)">
             <p>Bolo Decorado</p>
         </div>
 
         <div class="produto">
-            <img src="img/brownie.png" alt="Produto">
+            <img src="img/brownie.png" alt="Produto" onclick="abrirImagem(this.src)">
             <p> Brownie Supreme</p>
         </div>
 
@@ -117,5 +117,8 @@
     </main>
 
     <script src="script.js?v=1100"></script>
+    <div id="modalImagem" class="modal-imagem" onclick="fecharImagem()">
+    <img id="imagemAmpliada" src="">
+</div>
 </body>
 </html>
