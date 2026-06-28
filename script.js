@@ -97,76 +97,67 @@ function fecharImagem(){
 })();
 
 
-/* GALERIA DO CATÁLOGO */
+/* GALERIA DO CATÁLOGO - CATEGORIA ABRE CARROSSEL */
 const whatsappBase = "https://wa.me/5561985167596?text=";
 
 const galeriaDados = {
-    bolos: [
-        { titulo:"Bolo Decorado", img:"img/bolos/bolo01.jpeg" },
-        { titulo:"Bolo de Aniversário", img:"img/bolos/bolo02.jpeg" },
-        { titulo:"Bolo Especial", img:"img/bolos/bolo03.jpeg" },
-        { titulo:"Bolo Personalizado", img:"img/bolos/bolo04.jpeg" }
-    ],
-    doces: [
-        { titulo:"Docinhos Sortidos", img:"img/doces/doce01.jpeg" },
-        { titulo:"Doces para Festa", img:"img/doces/doce02.jpeg" },
-        { titulo:"Sobremesa Especial", img:"img/doces/doce03.jpeg" },
-        { titulo:"Doce da Casa", img:"img/doces/doce04.png" }
-    ],
-    lanches: [
-        { titulo:"Lanche Especial", img:"img/lanches/lanche01.png" },
-        { titulo:"Salgado Especial", img:"img/lanches/lanche02.png" },
-        { titulo:"Combo de Lanches", img:"img/lanches/lanche03.png" },
-        { titulo:"Lanche da Casa", img:"img/lanches/lanche04.png" }
-    ],
-    dindin: [
-        { titulo:"Dindin de Pudim", img:"img/dindin/dindinpudim.png" },
-        { titulo:"Dindin de Ninho com Nutella", img:"img/dindin/dindinnutella.png" },
-        { titulo:"Dindin de Maracujá com Chocolate", img:"img/dindin/dindinmaracuja.png" },
-        { titulo:"Dindin de Frutas Vermelhas com Chocolate", img:"img/dindin/dindinfrutasvermelhas.png" }
-    ]
+    bolos: {
+        nome: "Bolos",
+        descricao: "Bolos decorados e personalizados para datas especiais.",
+        pedido: "Olá! Vim pelo site da Naiara Sobral Cakes e gostaria de fazer um orçamento de bolo.",
+        fotos: [
+            "img/bolos/bolo01.jpeg",
+            "img/bolos/bolo02.jpeg",
+            "img/bolos/bolo03.jpeg",
+            "img/bolos/bolo04.jpeg"
+        ]
+    },
+    doces: {
+        nome: "Doces",
+        descricao: "Docinhos, sobremesas e doces para festas.",
+        pedido: "Olá! Vim pelo site da Naiara Sobral Cakes e gostaria de fazer um pedido/orçamento de doces.",
+        fotos: [
+            "img/doces/doce01.jpeg",
+            "img/doces/doce02.jpeg",
+            "img/doces/doce03.jpeg",
+            "img/doces/doce04.png"
+        ]
+    },
+    lanches: {
+        nome: "Lanches",
+        descricao: "Salgados, lanches e opções para o dia a dia.",
+        pedido: "Olá! Vim pelo site da Naiara Sobral Cakes e gostaria de fazer um pedido/orçamento de lanches.",
+        fotos: [
+            "img/lanches/lanche01.png",
+            "img/lanches/lanche02.png",
+            "img/lanches/lanche03.png",
+            "img/lanches/lanche04.png"
+        ]
+    },
+    dindin: {
+        nome: "Dindins",
+        descricao: "Sabores cremosos: pudim, ninho com Nutella, maracujá com chocolate e frutas vermelhas com chocolate.",
+        pedido: "Olá! Vim pelo site da Naiara Sobral Cakes e gostaria de pedir dindins.",
+        fotos: [
+            "img/dindin/dindinpudim.png",
+            "img/dindin/dindinnutella.png",
+            "img/dindin/dindinmaracuja.png",
+            "img/dindin/dindinfrutasvermelhas.png"
+        ]
+    }
 };
 
 let categoriaAtual = "bolos";
 let itemAtual = 0;
 let touchStartX = 0;
 
-function montarLinkPedido(nome){
-    return whatsappBase + encodeURIComponent(`Olá! Vim pelo site da Naiara Sobral Cakes e gostaria de pedir/orçar: ${nome}.`);
+function montarLinkPedido(texto){
+    return whatsappBase + encodeURIComponent(texto);
 }
 
-function renderizarGaleria(categoria = "bolos"){
-    const grid = document.getElementById("galeriaGrid");
-    if(!grid) return;
-
+function abrirCategoria(categoria){
     categoriaAtual = categoria;
-    grid.innerHTML = "";
-
-    galeriaDados[categoria].forEach((item, index) => {
-        const card = document.createElement("article");
-        card.className = "galeria-card";
-
-        card.innerHTML = `
-            <img src="${item.img}" alt="${item.titulo}" onclick="abrirGaleria(${index})">
-            <div class="galeria-card-info">
-                <h3>${item.titulo}</h3>
-                <div class="galeria-acoes">
-                    <button class="galeria-ver" type="button" onclick="abrirGaleria(${index})">Ver</button>
-                    <a class="galeria-card-pedido" href="${montarLinkPedido(item.titulo)}" target="_blank">Pedir</a>
-                </div>
-            </div>
-        `;
-
-        grid.appendChild(card);
-    });
-
-    grid.style.animation = "none";
-    grid.offsetHeight;
-    grid.style.animation = "galeriaEntrar 0.35s ease both";
-}
-
-function abrirGaleria(index){
-    itemAtual = index;
+    itemAtual = 0;
     atualizarModalGaleria();
 
     const modal = document.getElementById("galeriaModal");
@@ -185,31 +176,27 @@ function fecharGaleria(){
 }
 
 function mudarGaleria(direcao){
-    const lista = galeriaDados[categoriaAtual];
+    const lista = galeriaDados[categoriaAtual].fotos;
     itemAtual = (itemAtual + direcao + lista.length) % lista.length;
     atualizarModalGaleria();
 }
 
 function atualizarModalGaleria(){
-    const lista = galeriaDados[categoriaAtual];
-    const item = lista[itemAtual];
+    const categoria = galeriaDados[categoriaAtual];
+    const foto = categoria.fotos[itemAtual];
+    const img = document.getElementById("galeriaModalImg");
 
-    document.getElementById("galeriaModalImg").src = item.img;
-    document.getElementById("galeriaModalImg").alt = item.titulo;
-    document.getElementById("galeriaModalTitulo").textContent = item.titulo;
-    document.getElementById("galeriaModalDesc").textContent = "Produto da Naiara Sobral Cakes";
-    document.getElementById("galeriaContador").textContent = `${itemAtual + 1} de ${lista.length}`;
-    document.getElementById("galeriaPedido").href = montarLinkPedido(item.titulo);
+    img.style.animation = "none";
+    img.offsetHeight;
+    img.src = foto;
+    img.alt = categoria.nome;
+    img.style.animation = "fotoEntrar 0.22s ease both";
+
+    document.getElementById("galeriaModalTitulo").textContent = categoria.nome;
+    document.getElementById("galeriaModalDesc").textContent = categoria.descricao;
+    document.getElementById("galeriaContador").textContent = `${itemAtual + 1} de ${categoria.fotos.length}`;
+    document.getElementById("galeriaPedido").href = montarLinkPedido(categoria.pedido);
 }
-
-const filtrosGaleria = document.querySelectorAll(".galeria-filtro");
-filtrosGaleria.forEach(botao => {
-    botao.addEventListener("click", () => {
-        filtrosGaleria.forEach(b => b.classList.remove("ativo"));
-        botao.classList.add("ativo");
-        renderizarGaleria(botao.dataset.categoria);
-    });
-});
 
 const modalGaleria = document.getElementById("galeriaModal");
 if(modalGaleria){
@@ -241,5 +228,3 @@ document.addEventListener("keydown", (event) => {
     if(event.key === "ArrowLeft") mudarGaleria(-1);
     if(event.key === "ArrowRight") mudarGaleria(1);
 });
-
-renderizarGaleria("bolos");

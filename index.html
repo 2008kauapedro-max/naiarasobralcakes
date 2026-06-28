@@ -6,7 +6,7 @@
     <title>Naiara Sobral Cakes</title>
 
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="style.css?v=1300">
+    <link rel="stylesheet" href="style.css?v=1400">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -81,88 +81,38 @@
             <span>✉️</span>
             <span>E-mail</span>
         </a>
-<section class="produtos">
-
-    <h2>⭐  Nossos Destaques ⭐ </h2>
-
-    <div class="produtos-grid">
-
-     <div class="produto">
-    <img src="img/coxinhamorango.png" alt="Produto" onclick="abrirImagem(this.src)">
-    <p>Coxinha de Morango</p>
-
-    <a class="pedido-produto"
-       href="https://wa.me/5561985167596?text=Olá! Gostaria de pedir a Coxinha de Morango."
-       target="_blank">
-       Fazer Pedido
-    </a>
-</div>
-
-        <div class="produto">
-           <img src="img/bolo-decorado.png" alt="Produto" onclick="abrirImagem(this.src)">
-            <p>Bolo Decorado</p>
-
-             <a class="pedido-produto"
-       href="https://wa.me/5561985167596?text=Olá! Gostaria de pedir o Bolo Decorado."
-       target="_blank">
-       Fazer Pedido
-    </a>
-        </div>
-
-        <div class="produto">
-            <img src="img/brownie.png" alt="Produto" onclick="abrirImagem(this.src)">
-            <p> Brownie Supreme</p>
-
-             <a class="pedido-produto"
-       href="https://wa.me/5561985167596?text=Olá! Gostaria de pedir o Brownie Supreme."
-       target="_blank">
-       Fazer Pedido
-    </a>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="destaque">
-
-    <img src="img/dindin-pudim.png" class="destaque-img" alt="Dindin de Pudim">
-
-    <div class="destaque-conteudo">
-        <h2>🔥 Produto da Semana 🔥</h2>
-
-        <p class="destaque-produto">
-             Dindin de Pudim
-        </p>
-
-        <p>
-            Cremoso, delicioso e um dos favoritos dos nossos clientes.
-        </p>
-
-        <a class="btn-destaque"
-   href="https://wa.me/5561985167596?text=Olá! Gostaria de pedir o Dindin de Pudim."
-   target="_blank">
-   🍮 Pedir Agora
-</a>
-    </div>
-
-</section>
-
 <section class="galeria" id="galeria">
     <div class="galeria-topo">
         <span class="galeria-label">Catálogo Visual</span>
-        <h2>📸 Galeria da Loja</h2>
-        <p>Escolha uma categoria e veja nossos produtos com mais detalhes.</p>
+        <h2>✨ Galeria da Loja ✨</h2>
+        
     </div>
 
-    <div class="galeria-filtros" aria-label="Categorias da galeria">
-        <button class="galeria-filtro ativo" data-categoria="bolos">🍰 Bolos</button>
-        <button class="galeria-filtro" data-categoria="doces">🧁 Doces</button>
-        <button class="galeria-filtro" data-categoria="lanches">🥟 Lanches</button>
-        <button class="galeria-filtro" data-categoria="dindin">🍮 Dindins</button>
-    </div>
+    <div class="galeria-categorias" aria-label="Categorias da galeria">
+        <button class="categoria-card" type="button" onclick="abrirCategoria('bolos')">
+            <span>🍰</span>
+            <strong>Bolos</strong>
+            <small>Ver fotos</small>
+        </button>
 
-    <div class="galeria-grid" id="galeriaGrid"></div>
+        <button class="categoria-card" type="button" onclick="abrirCategoria('doces')">
+            <span>🧁</span>
+            <strong>Doces</strong>
+            <small>Ver fotos</small>
+        </button>
+
+        <button class="categoria-card" type="button" onclick="abrirCategoria('lanches')">
+            <span>🥟</span>
+            <strong>Lanches</strong>
+            <small>Ver fotos</small>
+        </button>
+
+        <button class="categoria-card" type="button" onclick="abrirCategoria('dindin')">
+            <span>❄️</span>
+            <strong>Dindins</strong>
+            <small>Ver sabores</small>
+        </button>
+    </div>
 </section>
 
 <div class="galeria-modal" id="galeriaModal" aria-hidden="true">
@@ -206,7 +156,7 @@
 
     </main>
 
-    <script src="script.js?v=1300"></script>
+    <script src="script.js?v=1400"></script>
     <div id="modalImagem" class="modal-imagem" onclick="fecharImagem()">
     <img id="imagemAmpliada" src="">
 </div>
