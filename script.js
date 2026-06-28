@@ -65,3 +65,21 @@ function fecharImagem(){
 
     document.getElementById("modalImagem").style.display = "none";
 }
+
+/* ABERTURA ANIMADA */
+window.addEventListener("load", () => {
+    const introScreen = document.getElementById("introScreen");
+
+    if(!introScreen) return;
+
+    document.body.classList.add("intro-lock");
+
+    setTimeout(() => {
+        introScreen.classList.add("intro-hide");
+        document.body.classList.remove("intro-lock");
+    }, 1900);
+
+    setTimeout(() => {
+        introScreen.remove();
+    }, 2800);
+});
