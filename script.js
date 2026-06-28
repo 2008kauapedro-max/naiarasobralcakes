@@ -65,3 +65,33 @@ function fecharImagem(){
 
     document.getElementById("modalImagem").style.display = "none";
 }
+
+/* ABERTURA ANIMADA */
+(function(){
+    const startIntro = () => {
+        const introScreen = document.getElementById("introScreen");
+        if(!introScreen) return;
+
+        document.body.classList.add("intro-lock");
+
+        // Força o navegador do Instagram/celular a iniciar as animações antes de remover a tela
+        requestAnimationFrame(() => {
+            introScreen.classList.add("intro-start");
+        });
+
+        setTimeout(() => {
+            introScreen.classList.add("intro-hide");
+            document.body.classList.remove("intro-lock");
+        }, 2300);
+
+        setTimeout(() => {
+            introScreen.remove();
+        }, 3100);
+    };
+
+    if(document.readyState === "loading"){
+        document.addEventListener("DOMContentLoaded", startIntro);
+    }else{
+        startIntro();
+    }
+})();
