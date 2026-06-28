@@ -6,7 +6,7 @@
     <title>Naiara Sobral Cakes</title>
 
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="style.css?v=1201">
+    <link rel="stylesheet" href="style.css?v=1300">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -147,6 +147,47 @@
     </div>
 
 </section>
+
+<section class="galeria" id="galeria">
+    <div class="galeria-topo">
+        <span class="galeria-label">Catálogo Visual</span>
+        <h2>📸 Galeria da Loja</h2>
+        <p>Escolha uma categoria e veja nossos produtos com mais detalhes.</p>
+    </div>
+
+    <div class="galeria-filtros" aria-label="Categorias da galeria">
+        <button class="galeria-filtro ativo" data-categoria="bolos">🍰 Bolos</button>
+        <button class="galeria-filtro" data-categoria="doces">🧁 Doces</button>
+        <button class="galeria-filtro" data-categoria="lanches">🥟 Lanches</button>
+        <button class="galeria-filtro" data-categoria="dindin">🍮 Dindins</button>
+    </div>
+
+    <div class="galeria-grid" id="galeriaGrid"></div>
+</section>
+
+<div class="galeria-modal" id="galeriaModal" aria-hidden="true">
+    <button class="galeria-fechar" type="button" onclick="fecharGaleria()">×</button>
+
+    <button class="galeria-seta galeria-anterior" type="button" onclick="mudarGaleria(-1)">‹</button>
+
+    <div class="galeria-modal-card">
+        <img id="galeriaModalImg" src="" alt="">
+
+        <div class="galeria-modal-info">
+            <span id="galeriaContador">1 de 4</span>
+            <h3 id="galeriaModalTitulo">Produto</h3>
+            <p id="galeriaModalDesc">Naiara Sobral Cakes</p>
+
+            <a id="galeriaPedido" class="galeria-pedido" href="#" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Pedir pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <button class="galeria-seta galeria-proximo" type="button" onclick="mudarGaleria(1)">›</button>
+</div>
+
         <section class="reviews">
             <h2>⭐ O que nossos clientes dizem</h2>
 
@@ -165,7 +206,7 @@
 
     </main>
 
-    <script src="script.js?v=1201"></script>
+    <script src="script.js?v=1300"></script>
     <div id="modalImagem" class="modal-imagem" onclick="fecharImagem()">
     <img id="imagemAmpliada" src="">
 </div>
