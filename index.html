@@ -6,7 +6,7 @@
     <title>Naiara Sobral Cakes</title>
 
     <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="style.css?v=1400">
+    <link rel="stylesheet" href="style.css?v=1500">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -84,8 +84,8 @@
 <section class="galeria" id="galeria">
     <div class="galeria-topo">
         <span class="galeria-label">Catálogo Visual</span>
-        <h2>✨ Galeria da Loja ✨</h2>
-        
+        <h2>📸 Galeria da Loja</h2>
+        <p>Escolha uma categoria para ver as fotos passando para o lado.</p>
     </div>
 
     <div class="galeria-categorias" aria-label="Categorias da galeria">
@@ -108,35 +108,13 @@
         </button>
 
         <button class="categoria-card" type="button" onclick="abrirCategoria('dindin')">
-            <span>❄️</span>
+            <span>🍮</span>
             <strong>Dindins</strong>
             <small>Ver sabores</small>
         </button>
     </div>
 </section>
 
-<div class="galeria-modal" id="galeriaModal" aria-hidden="true">
-    <button class="galeria-fechar" type="button" onclick="fecharGaleria()">×</button>
-
-    <button class="galeria-seta galeria-anterior" type="button" onclick="mudarGaleria(-1)">‹</button>
-
-    <div class="galeria-modal-card">
-        <img id="galeriaModalImg" src="" alt="">
-
-        <div class="galeria-modal-info">
-            <span id="galeriaContador">1 de 4</span>
-            <h3 id="galeriaModalTitulo">Produto</h3>
-            <p id="galeriaModalDesc">Naiara Sobral Cakes</p>
-
-            <a id="galeriaPedido" class="galeria-pedido" href="#" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                Pedir pelo WhatsApp
-            </a>
-        </div>
-    </div>
-
-    <button class="galeria-seta galeria-proximo" type="button" onclick="mudarGaleria(1)">›</button>
-</div>
 
         <section class="reviews">
             <h2>⭐ O que nossos clientes dizem</h2>
@@ -156,7 +134,29 @@
 
     </main>
 
-    <script src="script.js?v=1400"></script>
+<div class="galeria-modal" id="galeriaModal" aria-hidden="true">
+    <button class="galeria-seta galeria-anterior" type="button" onclick="mudarGaleria(-1)">‹</button>
+
+    <div class="galeria-modal-card">
+        <button class="galeria-fechar" type="button" onclick="fecharGaleria()" aria-label="Fechar galeria">×</button>
+        <img id="galeriaModalImg" src="" alt="">
+
+        <div class="galeria-modal-info">
+            <span id="galeriaContador">1 de 4</span>
+            <h3 id="galeriaModalTitulo">Produto</h3>
+            <p id="galeriaModalDesc">Naiara Sobral Cakes</p>
+
+            <a id="galeriaPedido" class="galeria-pedido" href="#" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Pedir pelo WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <button class="galeria-seta galeria-proximo" type="button" onclick="mudarGaleria(1)">›</button>
+</div>
+
+    <script src="script.js?v=1500"></script>
     <div id="modalImagem" class="modal-imagem" onclick="fecharImagem()">
     <img id="imagemAmpliada" src="">
 </div>
